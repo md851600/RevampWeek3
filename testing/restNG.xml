@@ -1,0 +1,22 @@
+<suite name="testNG Suite -  Community IntelliJ for restAssured Sept, 2024">
+    <listeners>
+        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter" />
+    </listeners>
+    <test name="basics.api">
+        <classes>
+            <class name="test.RestAPI"></class>
+        </classes>
+    </test>
+    <test name="Sept 2 on IntelliJ Commnuity Version">
+        <classes>
+            <class name="basics.Aug28"></class>
+        </classes>
+    </test>
+    <test name="LEADIFF Parameters">
+        <parameter name="UserNameValue" value="huan.zhong@tekschool.us"></parameter>
+        <parameter name="pswdValue" value="Russ!a18"></parameter>
+        <classes>
+            <class name="master.NewRunner"></class>
+        </classes>
+    </test>
+</suite>
