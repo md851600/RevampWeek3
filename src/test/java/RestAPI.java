@@ -1,7 +1,8 @@
 import org.testng.Assert;
-
+//Sept14 run warning - Method testLEADIF never used
 import java.sql.*;
-
+//Sept18 test2@EcLipse passed but testLEADIF failed
+//Oct30 RAC called by resources/restNG.xml
 public class RestAPI {
     public void testLEADIF() throws Exception {
         String url = "jdbc:mysql://localhost:3306/jan20";
@@ -9,7 +10,8 @@ public class RestAPI {
         String password = "Aimereon24";
 
         Connection connection = null;
-        Statement statement = null;
+        Statement statement;
+        statement = null;
         ResultSet resultSet = null;
         boolean resSet = false;
         try {
@@ -29,7 +31,7 @@ public class RestAPI {
                 Assert.assertEquals(rev, "1.150", "records updated!");
                 Assert.assertEquals(resultSet.getString(3), "shift supervisor");//check for revison #
             }
-            System.out.println("Sept4 Eclipse " + statement.execute(sqlQuery));
+            System.out.println("Sept14 IntelliJ " + statement.execute(sqlQuery));
             System.out.println("LEADIF_Demo executeQuery " + resultSet);
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
